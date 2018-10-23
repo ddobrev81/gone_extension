@@ -1,0 +1,7 @@
+gone_extension.site:
+  type: config_object
+  label: '410 handler'
+  mapping:
+    410:
+      type: path
+      label: 'Default 410 (gone) page'

@@ -1,0 +1,7 @@
+system.410:
+  path: '/system/410'
+  defaults:
+    _controller: '\Drupal\gone_extension\Controller\Http410Controller:on410'
+    _title: 'Gone'
+  requirements:
+    _access: 'TRUE'

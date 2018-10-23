@@ -1,0 +1,5 @@
+name: Gone Extension
+type: module
+description: 'Adds 410 error handling to Drupal.'
+package: Other
+core: 8.x

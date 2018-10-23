@@ -1,0 +1,15 @@
+services:
+  gone_extension.route_subscriber:
+    class: Drupal\gone_extension\Routing\GoneExtensionRouteSubscriber
+    tags:
+    - { name: event_subscriber }
+  gone_extension.custom_page_html:
+    class: Drupal\gone_extension\EventSubscriber\GoneExtensionCustomPageExceptionHtmlSubscriber
+    tags:
+    - { name: event_subscriber }
+    arguments: ['@config.factory', '@http_kernel', '@logger.channel.php', '@redirect.destination', '@router.no_access_checks', '@access_manager']
+  gone_extension.response_subscriber:
+    class: Drupal\gone_extension\EventSubscriber\GoneExtensionResponseSubscriber
+    arguments: ['@current_user']
+    tags:
+    - { name: event_subscriber }
